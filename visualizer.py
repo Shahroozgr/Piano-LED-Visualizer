@@ -16,10 +16,10 @@ import webcolors as wc
 
 import sys
 import os
+os.chdir(sys.path[0])
 import datetime
 import psutil
 
-os.chdir(sys.path[0])
 
 import mido
 from mido import MidiFile, Message, tempo2bpm, MidiTrack,MetaMessage
