@@ -34,7 +34,7 @@ class LedStrip:
         self.brightness = 255 * self.brightness_percent / 100
         
         # LED strip configuration:
-        self.LED_COUNT      = 88     # Number of LED pixels.
+        self.LED_COUNT      = 176     # Number of LED pixels.
         self.LED_PIN        = 18      # GPIO pin connected to the pixels (18 uses PWM!).
         #LED_PIN        = 10      # GPIO pin connected to the pixels (10 uses SPI /dev/spidev0.0).
         self.LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
