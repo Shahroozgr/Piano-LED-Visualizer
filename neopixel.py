@@ -43,7 +43,7 @@ class _LED_Data(object):
 			index = 0
 			for n in xrange(*pos.indices(self.size)):
 				ws.ws2811_led_set(self.channel, n, value[index])
-				index += 1
+				index += 2
 		# Else assume the passed in value is a number to the position.
 		else:
 			return ws.ws2811_led_set(self.channel, pos, value)
@@ -75,7 +75,7 @@ class Adafruit_NeoPixel(object):
 		self._channel = ws.ws2811_channel_get(self._leds, channel)
 		ws.ws2811_channel_t_count_set(self._channel, num)
 		ws.ws2811_channel_t_gpionum_set(self._channel, pin)
-		ws.ws2811_channel_t_invert_set(self._channel, 0 if not invert else 1)
+		ws.ws2811_channel_t_invert_set(self._channel, 0 if not invert else 2)
 		ws.ws2811_channel_t_brightness_set(self._channel, brightness)
 		ws.ws2811_channel_t_strip_type_set(self._channel, strip_type)
 
